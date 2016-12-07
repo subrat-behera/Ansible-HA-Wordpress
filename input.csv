@@ -1,0 +1,13 @@
+Parameter,Value,Description
+rds_instance_name,mydb,Give a Name to the RDS Instance
+rds_db_name,wordpress,Give a name to the RDS DB
+rds_instance_type,db.t2.micro,Mention the db Instance Type
+rds_db_username,wordpress,Mention the user name for DB
+rds_db_password,wordpress,Mention the DB Password
+rds_subnet_group,my_subnet_group,Mention a Name for the RDS subnet group
+ENV,testing,"Give an Environment name e.g. testing ,production"
+application,wordpress,Application Name
+server_role,webserver,Mention the Server Role
+vpc_name,Ntwelve,Give a name to the vpc
+vpc_region,us-east-1,Mention the Region name where vpc needs to be created
+web_instance_type,t2.micro,Mention the instance type for webserver

@@ -1,0 +1,17 @@
+---
+ timezone: "Asia/Kolkata"
+ pkgs_list:
+   - build-essential
+   - python-software-properties
+   - git
+   - unattended-upgrades
+   - openntpd
+ users_list:
+  - username: subrat
+    github_username: subrat
+    type: admin
+    state: present
+#  - username: tendo
+#    github_username: arbabnazar 
+#    type: normal
+#    state: present

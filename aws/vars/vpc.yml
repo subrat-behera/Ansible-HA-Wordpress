@@ -1,0 +1,29 @@
+private_az: '{{ vpc_region }}c'
+private_cidr: 10.0.3.0/24
+public_az_1: '{{ vpc_region }}a'
+public_az_2: '{{ vpc_region }}b'
+public_cidr_1: 10.0.1.0/24
+public_cidr_2: 10.0.2.0/24
+public_subnet_rt:
+- routes:
+  - dest: 0.0.0.0/0
+    gw: igw
+  subnets:
+  - '{{ public_cidr_1 }}'
+  - '{{ public_cidr_2 }}'
+vpc_cidr_block: 10.0.0.0/16
+vpc_name: Nten
+vpc_region: us-east-1
+vpc_subnets:
+- az: '{{ public_az_1 }}'
+  cidr: '{{ public_cidr_1 }}'
+  resource_tags:
+    Name: '{{ vpc_name }}-{{ public_az_1 }}-public-subnet'
+- az: '{{ public_az_2 }}'
+  cidr: '{{ public_cidr_2 }}'
+  resource_tags:
+    Name: '{{ vpc_name }}-{{ public_az_2 }}-public-subnet'
+- az: '{{ private_az }}'
+  cidr: '{{ private_cidr }}'
+  resource_tags:
+    Name: '{{ vpc_name }}-{{ private_az }}-private-subnet'

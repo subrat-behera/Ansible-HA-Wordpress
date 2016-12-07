@@ -1,0 +1,18 @@
+ami_store: ebs
+cpu_architecture: amd64
+linux_distribution: ubuntu
+ubuntu_release: trusty
+virutalization_type: hvm
+web_instance_type: t2.micro
+web_security_groups:
+- sg_description: This sg is for app instance
+  sg_name: web-sg
+  sg_rules:
+  - cidr_ip: 0.0.0.0/0
+    from_port: 22
+    proto: tcp
+    to_port: 22
+  - cidr_ip: 0.0.0.0/0
+    from_port: 80
+    proto: tcp
+    to_port: 80
